@@ -1,6 +1,6 @@
 {
   "$schema": "https://unpkg.com/citepo/schema.json",
-  "name": "My Blog",
+  "name": "Citepo 博客",
   "description": "",
   "theme": "clean",
   "defaultLanguage": "en",
