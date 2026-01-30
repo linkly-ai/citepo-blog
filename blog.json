@@ -1,16 +1,25 @@
 {
-  "$schema": "https://unpkg.com/citepo/schema.json",
-  "name": "Citepo 博客",
-  "description": "",
+  "$schema": "https://cdn.citepo.com/assets/schema.json",
+  "name": "CitePo Blog",
+  "description": "How to use CitePo, SEO and GEO best practices and knowledge - Built by Citepo",
   "theme": "wabi",
   "logo": "https://cdn.citepo.com/assets/citepo-icon-128.webp",
-  "defaultLanguage": "zh",
-  "languages": ["zh", "en", "ja"],
+  "defaultLanguage": "en",
+  "languages": [
+    "en",
+    "zh",
+    "ja"
+  ],
   "hero": {
     "image": "https://cdn.citepo.com/assets/clean-banner.webp"
   },
   "contextual": {
-    "options": ["copy", "view", "chatgpt", "claude"]
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude"
+    ]
   },
   "basePath": "/",
   "rss": true,

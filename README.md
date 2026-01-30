@@ -1,4 +1,4 @@
-# My Blog
+# citepo-blog2
 
 A blog powered by [CitePo](https://citepo.com).
 
