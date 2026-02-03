@@ -1,0 +1,171 @@
+---
+title: Subdomain 与 Subdirectory：SEO 视角下的最佳选择
+description: 详解 subdomain 和 subdirectory 的区别，以及为什么大多数 SEO 专家推荐使用 subdirectory
+date: 2026-02-03
+tags: [SEO, Domain, Best Practices]
+authors: [CitePo]
+coverImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=960&q=80"
+draft: false
+---
+
+当你准备为网站添加博客时，一个看似简单的问题摆在面前：博客应该放在 `blog.example.com`（子域名）还是 `example.com/blog`（子目录）？
+
+这个决策会影响你网站的 SEO 表现、管理复杂度，以及长期的内容策略。让我们深入探讨这两种方案的区别，以及如何做出正确选择。
+
+## 技术定义
+
+在开始之前，先明确这两个概念：
+
+**Subdomain（子域名）**：在主域名前添加前缀，形成独立的三级域名。
+
+```
+blog.example.com
+shop.example.com
+docs.example.com
+```
+
+**Subdirectory（子目录）**：在主域名后添加路径，内容托管在同一域名下。
+
+```
+example.com/blog
+example.com/shop
+example.com/docs
+```
+
+![Subdomain 与 Subdirectory 的 URL 结构对比](images/subdomain-vs-subdirectory.webp)
+
+从技术架构上看，子域名可以指向完全不同的服务器，而子目录通常在同一服务器上。这个区别对搜索引擎如何理解和处理你的内容有重要影响。
+
+## Google 官方立场
+
+Google Search Advocate John Mueller 多次公开表态：
+
+> "In general, we see these the same. I would personally try to keep things together as much as possible."
+>
+> （总体而言，我们对两者一视同仁。但我个人建议尽可能把内容放在一起。）
+
+在另一次回应中，他进一步解释：
+
+> "Google Web Search is fine with using either subdomains or subdirectories... use what works best for your setup and think about your longer-term plans when picking one or the other."
+>
+> （Google 网页搜索对使用子域名或子目录都没问题……选择最适合你设置的方案，并考虑长期规划。）
+
+Google 官方的立场很明确：**从技术层面，搜索算法可以同等处理两种结构**。但值得注意的是，即使是 Google 的官方代表，个人也倾向于推荐子目录。
+
+## 行业专家的不同看法
+
+尽管 Google 声称两者等效，但 SEO 社区的实践经验讲述了不同的故事。
+
+多位知名 SEO 专家分享了他们的观点：
+
+- **Gianluca Fiorelli**（MOZ/I Love SEO）：子目录是最佳选择，因为权重更集中
+- **Stephen Kenwright**（Branded3）：子目录几乎总是优于子域名
+- **Eric Enge**（Stone Temple）：新站推荐子目录，不值得仅为 SEO 迁移现有子域名
+
+### 真实案例数据
+
+以下是一些公开的迁移案例：
+
+| 案例          | 变化                      | 结果                      |
+| ------------- | ------------------------- | ------------------------- |
+| Chubo Knives  | 子域名 → 子目录           | +421% 自然流量            |
+| Monster.co.uk | 子域名 → 子目录           | +116% 搜索可见度          |
+| HotPads       | blog.hotpads.com → /blog/ | 流量翻倍                  |
+| Flick         | 子域名 → 子目录           | 12 个月内达 960 万/年流量 |
+
+当然，也有失败的案例。IWantMyName 曾从子目录迁移到子域名，结果流量大幅下降，不得不迁回。
+
+<Callout type="warning">
+  需要注意的是，这些成功案例往往伴随着其他优化措施，如平台重构、内链优化、修复技术问题等。单纯的结构迁移不一定能保证同样的效果。
+</Callout>
+
+## 技术层面的分析
+
+为什么实践中子目录往往表现更好？让我们从技术角度分析。
+
+### 域名权重（Domain Authority）传递
+
+子目录天然继承主域名的全部权威。当有人链接到 `example.com/blog/article`，这个外链直接增强整个 `example.com` 的权重。
+
+子域名则被搜索引擎视为半独立实体。链接到 `blog.example.com` 的价值主要累积在子域名本身，对主域名的贡献较为间接。
+
+### 内部链接的价值
+
+- **子目录**：所有内部链接都是真正的内部链接，权重传递顺畅
+- **子域名**：子域名之间的链接可能被视为"外部链接"，权重传递打折
+
+### 爬虫行为差异
+
+John Mueller 解释了 Google 爬虫的行为差异：
+
+> 子目录帮助我们爬取，因为我们知道所有内容都在同一服务器上，可以类似地爬取。
+>
+> 子域名对我们也可行……但我们需要学习单独爬取它们，这主要是前几天的形式问题。
+
+虽然只是"前几天"的问题，但对于新站点或新增内容，这个学习期可能影响收录速度。
+
+### 管理便利性
+
+使用子目录时，你只需要：
+
+- 一个 SSL 证书
+- 一套分析配置（Google Analytics / Search Console）
+- 一个主机环境
+
+子域名则可能需要分别配置这些，增加运维负担。
+
+## 如何选择？
+
+### 推荐使用子目录的场景
+
+| 场景            | 原因                       |
+| --------------- | -------------------------- |
+| 博客            | 共享主站权威，提升整体 SEO |
+| 产品页面        | 统一品牌，简化管理         |
+| 资源中心/知识库 | 内链效果最大化             |
+| 新站点          | 集中建设权威更高效         |
+
+### 适合使用子域名的场景
+
+| 场景             | 原因                           |
+| ---------------- | ------------------------------ |
+| 国际化站点       | es.example.com, fr.example.com |
+| 独立应用/工具    | app.example.com 需要独立部署   |
+| 完全不同的业务线 | 品牌区隔需要                   |
+| 开发/测试环境    | staging.example.com            |
+| 技术架构限制     | 无法在主域名下托管             |
+
+<Callout type="tip">
+  如果你只是想为网站添加一个博客来获取自然流量，子目录几乎总是更好的选择。
+</Callout>
+
+## CitePo 的建议
+
+作为一个[同时为 SEO 和 GEO 优化的博客平台](/zh/why-choose-citepo-to-build-blog)，CitePo 支持两种部署方式：
+
+**如果你已有网站**，我们强烈建议使用子目录部署（如 `example.com/blog`）。你的博客内容会直接为主域名积累权重，这是内容营销的核心价值。
+
+**如果是全新的独立博客**，子域名也是合理的选择。在这种情况下，你可以使用 `blog.yourname.com` 这样的结构。
+
+在 CitePo 的域名设置中，你可以自由选择这两种方式，并且拥有最有性价比的定价：
+
+> - 添加域名免费
+> - 只要开通 Pro 订阅计划就可以添加子目录，无需像其他播客平台那样还需单独付费，或者要订阅企业计划
+
+设置过程只需几分钟，无论哪种方式都能获得同样优质的托管服务。
+
+## 总结
+
+让我们回顾关键要点：
+
+1. **Google 官方**声称两者技术上等效
+2. **SEO 实践**普遍显示子目录表现更好
+3. **技术原因**包括权重继承、内链效果、管理便利
+4. **大多数场景**下，子目录是更安全的选择
+5. **特定场景**（国际化、独立应用）子域名更合适
+
+如果你正在为网站添加博客，子目录是我们推荐的默认选择。这不仅是 SEO 的最佳实践，也是最简单的技术方案。
+
+---
+
+_此博客由 [CitePo](https://citepo.com) 驱动。_

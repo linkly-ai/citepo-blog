@@ -1,0 +1,171 @@
+---
+title: "Subdomain vs Subdirectory: The Best Choice from an SEO Perspective"
+description: A comprehensive guide to the differences between subdomains and subdirectories, and why most SEO experts recommend subdirectories
+date: 2026-02-03
+tags: [SEO, Domain, Best Practices]
+authors: [CitePo]
+coverImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=960&q=80"
+draft: false
+---
+
+When adding a blog to your website, a seemingly simple question arises: should it live at `blog.example.com` (subdomain) or `example.com/blog` (subdirectory)?
+
+This decision affects your site's SEO performance, management complexity, and long-term content strategy. Let's dive deep into the differences between these two approaches and how to make the right choice.
+
+## Technical Definitions
+
+Before we begin, let's clarify these two concepts:
+
+**Subdomain**: A prefix added before the main domain, forming an independent third-level domain.
+
+```
+blog.example.com
+shop.example.com
+docs.example.com
+```
+
+**Subdirectory**: A path added after the main domain, with content hosted under the same domain.
+
+```
+example.com/blog
+example.com/shop
+example.com/docs
+```
+
+![Subdomain vs Subdirectory URL structure comparison](images/subdomain-vs-subdirectory.webp)
+
+From a technical architecture standpoint, subdomains can point to completely different servers, while subdirectories typically reside on the same server. This distinction significantly impacts how search engines understand and process your content.
+
+## Google's Official Position
+
+Google Search Advocate John Mueller has publicly stated multiple times:
+
+> "In general, we see these the same. I would personally try to keep things together as much as possible."
+
+In another response, he elaborated:
+
+> "Google Web Search is fine with using either subdomains or subdirectories... use what works best for your setup and think about your longer-term plans when picking one or the other."
+
+Google's official stance is clear: **from a technical perspective, their search algorithm can process both structures equally**. However, it's worth noting that even Google's official representative personally leans toward recommending subdirectories.
+
+## Industry Experts' Different Views
+
+Despite Google's claim that both are equivalent, the SEO community's practical experience tells a different story.
+
+Several prominent SEO experts have shared their perspectives:
+
+- **Gianluca Fiorelli** (MOZ/I Love SEO): Subdirectories are the best choice because authority is more concentrated
+- **Stephen Kenwright** (Branded3): Subdirectories are almost always better than subdomains
+- **Eric Enge** (Stone Temple): Recommends subdirectories for new sites; not worth migrating existing subdomains just for SEO
+
+### Real-World Case Studies
+
+Here are some publicly documented migration cases:
+
+| Case          | Change                    | Result                           |
+| ------------- | ------------------------- | -------------------------------- |
+| Chubo Knives  | Subdomain → Subdirectory  | +421% organic traffic            |
+| Monster.co.uk | Subdomain → Subdirectory  | +116% search visibility          |
+| HotPads       | blog.hotpads.com → /blog/ | Traffic doubled                  |
+| Flick         | Subdomain → Subdirectory  | 9.6M annual traffic in 12 months |
+
+Of course, there are also failed cases. IWantMyName once migrated from subdirectory to subdomain, resulting in a significant traffic drop and forcing them to migrate back.
+
+<Callout type="warning">
+  It's important to note that these successful cases often involved other
+  optimization measures, such as platform restructuring, internal link
+  improvements, and fixing technical issues. A structural migration alone
+  doesn't guarantee the same results.
+</Callout>
+
+## Technical Analysis
+
+Why do subdirectories tend to perform better in practice? Let's analyze from a technical perspective.
+
+### Domain Authority Transfer
+
+Subdirectories naturally inherit all authority from the main domain. When someone links to `example.com/blog/article`, that backlink directly strengthens the entire `example.com` domain.
+
+Subdomains, however, are treated by search engines as semi-independent entities. Links pointing to `blog.example.com` primarily accumulate value for the subdomain itself, with more indirect contribution to the main domain.
+
+### Internal Link Value
+
+- **Subdirectories**: All internal links are true internal links, with smooth authority transfer
+- **Subdomains**: Links between subdomains may be treated as "external links," diluting authority transfer
+
+### Crawler Behavior Differences
+
+John Mueller explained the differences in Google's crawler behavior:
+
+> Subdirectories help us crawl because we know all the content is on the same server and can crawl it similarly.
+>
+> Subdomains work for us too... but we need to learn to crawl them separately, which is mainly a formality for the first few days.
+
+While it's only a "few days" issue, for new sites or new content, this learning period may affect indexing speed.
+
+### Management Convenience
+
+With subdirectories, you only need:
+
+- One SSL certificate
+- One analytics configuration (Google Analytics / Search Console)
+- One hosting environment
+
+Subdomains may require separate configurations for each of these, increasing operational overhead.
+
+## How to Choose?
+
+### Scenarios Where Subdirectories Are Recommended
+
+| Scenario                         | Reason                                       |
+| -------------------------------- | -------------------------------------------- |
+| Blogs                            | Share main site authority, boost overall SEO |
+| Product pages                    | Unified branding, simplified management      |
+| Resource centers/Knowledge bases | Maximize internal link benefits              |
+| New sites                        | More efficient to concentrate authority      |
+
+### Scenarios Where Subdomains Are Appropriate
+
+| Scenario                            | Reason                                    |
+| ----------------------------------- | ----------------------------------------- |
+| International sites                 | es.example.com, fr.example.com            |
+| Standalone apps/tools               | app.example.com needs separate deployment |
+| Completely different business lines | Brand separation required                 |
+| Development/Testing environments    | staging.example.com                       |
+| Technical architecture constraints  | Cannot host under main domain             |
+
+<Callout type="tip">
+  If you simply want to add a blog to your website for organic traffic, 
+  subdirectories are almost always the better choice.
+</Callout>
+
+## CitePo's Recommendation
+
+As a [blogging platform optimized for both SEO and GEO](/en/why-choose-citepo-to-build-blog), CitePo supports both deployment methods:
+
+**If you already have a website**, we strongly recommend subdirectory deployment (e.g., `example.com/blog`). Your blog content will directly build authority for your main domain—this is the core value of content marketing.
+
+**If it's a brand new standalone blog**, subdomains are also a reasonable choice. In this case, you can use a structure like `blog.yourname.com`.
+
+In CitePo's domain settings, you can freely choose between these two methods, with the most cost-effective pricing:
+
+> - Adding a domain is free
+> - Simply subscribe to the Pro plan to add subdirectories—no need to pay extra or subscribe to an enterprise plan like other blogging platforms
+
+The setup process takes just a few minutes, and you'll receive the same high-quality hosting service regardless of which method you choose.
+
+## Summary
+
+Let's recap the key points:
+
+1. **Google officially** claims both are technically equivalent
+2. **SEO practice** generally shows subdirectories perform better
+3. **Technical reasons** include authority inheritance, internal link benefits, and management convenience
+4. **In most scenarios**, subdirectories are the safer choice
+5. **In specific scenarios** (internationalization, standalone apps), subdomains are more appropriate
+
+If you're adding a blog to your website, subdirectories are our recommended default choice. This is not only an SEO best practice but also the simplest technical solution.
+
+---
+
+_Powered by [CitePo](https://citepo.com)._
